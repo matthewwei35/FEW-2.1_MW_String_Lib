@@ -57,3 +57,23 @@ String.prototype.capitalizeWords = function() {
 
 console.log(capitalizeWords(str))
 console.log('hello world'.capitalizeWords())
+
+
+// ======= Challenge 5 ======= //
+console.log('--- kebabCase ---')
+
+function kebabCase(str) {
+  var words = str.split(' ')
+  var strKebab = []
+  for (var i = 0; i < words.length; i++) {
+    strKebab.push(lowerFirst(words[i]))
+  }
+  return strKebab.join('-')
+}
+
+String.prototype.kebabCase = function() {
+  return kebabCase(this)
+}
+
+console.log(kebabCase(str))
+console.log('hello world'.kebabCase())
