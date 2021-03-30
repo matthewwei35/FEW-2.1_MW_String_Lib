@@ -30,3 +30,23 @@ String.prototype.allCaps = function() {
 
 console.log(allCaps(str))
 console.log('hello world'.allCaps())
+
+
+// ======= Challenge 3 ======= //
+console.log('--- capitalizeWords ---')
+
+function capitalizeWords(str) {
+  var words = str.split(' ')
+  var capsList = []
+  for (var i = 0; i < words.length; i++) {
+    capsList.push(capitalize(words[i]))
+  }
+  return capsList.join(' ')
+}
+
+String.prototype.capitalizeWords = function() {
+  return capitalizeWords(this)
+}
+
+console.log(capitalizeWords(str))
+console.log('hello world'.capitalizeWords())
