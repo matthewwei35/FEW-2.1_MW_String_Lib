@@ -3,18 +3,18 @@ const str = 'hello world'
 // ======= Challenge 1 ======= //
 console.log('--- capitalize ---')
 
-function capitalize(str) {
+function upperFirst(str) {
   var strEndSlice = str.slice(1)
   var firstLetter = str[0].toUpperCase()
   return firstLetter + strEndSlice
 }
 
-String.prototype.capitalize = function() {
-  return capitalize(this)
+String.prototype.upperFirst = function() {
+  return upperFirst(this)
 }
 
-console.log(capitalize(str))
-console.log('hello world'.capitalize())
+console.log(upperFirst(str))
+console.log('hello world'.upperFirst())
 
 
 // ======= Challenge 2 ======= //
@@ -39,7 +39,7 @@ function capitalizeWords(str) {
   var words = str.split(' ')
   var capsList = []
   for (var i = 0; i < words.length; i++) {
-    capsList.push(capitalize(words[i]))
+    capsList.push(upperFirst(words[i]))
   }
   return capsList.join(' ')
 }
