@@ -15,3 +15,18 @@ String.prototype.capitalize = function() {
 
 console.log(capitalize(str))
 console.log('hello world'.capitalize())
+
+
+// ======= Challenge 2 ======= //
+console.log('--- allCaps ---')
+
+function allCaps(str) {
+  return str.toUpperCase()
+}
+
+String.prototype.allCaps = function() {
+  return allCaps(this)
+}
+
+console.log(allCaps(str))
+console.log('hello world'.allCaps())
