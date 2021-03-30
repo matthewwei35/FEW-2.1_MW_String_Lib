@@ -1,5 +1,12 @@
 const str = 'hello world'
 
+// ======= Helper Functions ======= //
+function lowerFirst(str) {
+  var strEndSlice = str.slice(1)
+  var firstLetter = str[0].toLowerCase()
+  return firstLetter + strEndSlice
+}
+
 // ======= Challenge 1 ======= //
 console.log('--- capitalize ---')
 
