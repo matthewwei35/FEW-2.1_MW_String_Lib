@@ -77,3 +77,24 @@ String.prototype.kebabCase = function() {
 
 console.log(kebabCase(str))
 console.log('hello world'.kebabCase())
+
+
+// ======= Challenge 6 ======= //
+console.log('--- snakeCase ---')
+
+function snakeCase(str) {
+  var words = str.split(' ')
+  var strSnake = []
+  for (var i = 0; i < words.length; i++) {
+    strSnake.push(lowerFirst(words[i]))
+  }
+  return strSnake.join('_')
+}
+
+String.prototype.snakeCase = function() {
+  return snakeCase(this)
+}
+
+console.log(snakeCase(str))
+console.log('hello world'.snakeCase())
+
