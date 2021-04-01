@@ -66,6 +66,27 @@ console.log(capitalizeWords(str))
 console.log('hello world'.capitalizeWords())
 
 
+// ======= Challenge 4 ======= //
+console.log('--- removeExtraSpace ---')
+
+function removeExtraSpace(str) {
+  var words = str.split(' ')
+  for (var i = words.length; i > 1; i--) {
+    if (words[i] == ''){
+      removeItem(words, words[i])
+    }
+  }
+  return words.join(' ')
+}
+
+String.prototype.removeExtraSpace = function() {
+  return removeExtraSpace(this)
+}
+
+console.log(removeExtraSpace('   Hello    world!   '))
+console.log('   Hello    world!   '.removeExtraSpace())
+
+
 // ======= Challenge 5 ======= //
 console.log('--- kebabCase ---')
 
