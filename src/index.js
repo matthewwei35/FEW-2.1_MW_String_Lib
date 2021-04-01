@@ -7,6 +7,13 @@ function lowerFirst(str) {
   return firstLetter + strEndSlice
 }
 
+function removeItem(array, item) {
+  var index = array.indexOf(item);
+  if (index > -1) {
+    array.splice(index, 1);
+  }
+}
+
 // ======= Challenge 1 ======= //
 console.log('--- capitalize ---')
 
