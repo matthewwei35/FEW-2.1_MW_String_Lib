@@ -15,7 +15,7 @@ function removeItem(array, item) {
 }
 
 // ======= Challenge 1 ======= //
-console.log('--- capitalize ---')
+console.log('--- upperFirst ---')
 
 function upperFirst(str) {
   var strEndSlice = str.slice(1)
