@@ -163,3 +163,28 @@ String.prototype.shift = function() {
 
 console.log(shift(str))
 console.log('hello world'.shift())
+
+
+// ======= Challenge 9 ======= //
+console.log('--- makeHashTag ---')
+
+function makeHashTag(str) {
+  var words = removeExtraSpace(str).split(' ')
+  var strHashTags = []
+  if (words.length > 3) {
+    words.sort((a, b) => {
+      b.length - a.length
+    })
+    for (var i = 0; i < 3; i++) {
+      strHashTags.push('#' + upperFirst(words[i]))
+    }
+  }
+  return strHashTags
+}
+
+String.prototype.makeHashTag = function() {
+  return makeHashTag(this)
+}
+
+console.log(makeHashTag('Amazing bongo drums for sale'))
+console.log('Amazing bongo drums for sale'.makeHashTag())
