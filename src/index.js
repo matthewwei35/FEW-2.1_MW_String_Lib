@@ -188,3 +188,24 @@ String.prototype.makeHashTag = function() {
 
 console.log(makeHashTag('Amazing bongo drums for sale'))
 console.log('Amazing bongo drums for sale'.makeHashTag())
+
+
+// ======= Challenge 10 ======= //
+console.log('--- isEmpty ---')
+
+function isEmpty(str) {
+  var words = str.trim().split('')
+  for (var i = 0; i < words.length; i++) {
+    if (words[i] != ('\n' || '\r' || '\t')) {
+      return false
+    }
+  }
+  return true
+}
+
+String.prototype.isEmpty = function() {
+  return isEmpty(this)
+}
+
+console.log(isEmpty(''))
+console.log(''.isEmpty())
