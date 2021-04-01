@@ -98,3 +98,23 @@ String.prototype.snakeCase = function() {
 console.log(snakeCase(str))
 console.log('hello world'.snakeCase())
 
+
+// ======= Challenge 7 ======= //
+console.log('--- camelCase ---')
+
+function camelCase(str) {
+  var words = str.split(' ')
+  var strCamel = []
+  strCamel.push(words[0].toLowerCase())
+  for (var i = 1; i < words.length; i++) {
+    strCamel.push(upperFirst(words[i]))
+  }
+  return strCamel.join('')
+}
+
+String.prototype.camelCase = function() {
+  return camelCase(this)
+}
+
+console.log(camelCase(str))
+console.log('hello world'.camelCase())
