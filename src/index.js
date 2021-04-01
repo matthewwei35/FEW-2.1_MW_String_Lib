@@ -118,3 +118,20 @@ String.prototype.camelCase = function() {
 
 console.log(camelCase(str))
 console.log('hello world'.camelCase())
+
+
+// ======= Challenge 8 ======= //
+console.log('--- shift ---')
+
+function shift(str) {
+  var strEndSlice = str.slice(1)
+  var firstLetter = str[0]
+  return strEndSlice + firstLetter
+}
+
+String.prototype.shift = function() {
+  return shift(this)
+}
+
+console.log(shift(str))
+console.log('hello world'.shift())
