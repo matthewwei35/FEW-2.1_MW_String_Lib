@@ -1,12 +1,20 @@
 {
-  "name": "String_Lib",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "@matthewwei35/string_lib",
+  "version": "1.0.1",
+  "description": "This library contains functions used to manipulate strings.",
+  "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "author": "Matthew Wei",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matthewwei35/FEW-2.1_MW_String_Lib.git"
+  },
+  "bugs": {
+    "url": "https://github.com/matthewwei35/FEW-2.1_MW_String_Lib/issues"
+  },
+  "homepage": "https://github.com/matthewwei35/FEW-2.1_MW_String_Lib#readme"
 }
