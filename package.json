@@ -1,6 +1,6 @@
 {
   "name": "@matthewwei35/string_lib",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "This library contains functions used to manipulate strings.",
   "main": "src/index.js",
   "scripts": {
