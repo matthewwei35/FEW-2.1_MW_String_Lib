@@ -8,30 +8,50 @@ This library contains functions used to manipulate strings.
 
 ## Functions
 ```javascript
-upperFirst(str)
+upperFirst(str)       // Upper cases the first letter of the first word
+// Input:   'hello world'
+// Output:  'Hello world'
 
-allCaps(str)
+allCaps(str)          // Upper cases every letter
+// Input:   'hello world'
+// Output:  'HELLO WORLD'
 
-capitalizeWords(str)
+capitalizeWords(str)  // Upper cases the first letter of every word
+// Input:   'hello world'
+// Output:  'Hello World'
 
-removeExtraSpace(str)
+removeExtraSpace(str) // Removes any extra spaces and keeps single spaces between words
+// Input:   '   hello    world   '
+// Output:  'hello world'
 
-kebabCase(str)
+kebabCase(str)        // Changes the format of string to kebabCase
+// Input:   'hello world'
+// Output:  'hello-world'
 
-snakeCase(str)
+snakeCase(str)        // Changes the format of string to snakeCase
+// Input:   'hello world'
+// Output:  'hello_world'
 
-camelCase(str)
+camelCase(str)        // Changes the format of string to camelCase
+// Input:   'hello world'
+// Output:  'helloWorld'
 
-shift(str)
+shift(str)            // Shifts the first letter of the first word to the back
+// Input:   'hello world'
+// Output:  'ello worldh'
 
-makeHashTag(str)
+makeHashTag(str)      // Gets the 3 biggest words in the string and changes the format of each word to hashtags
+// Input:   'Amazing bongo drums for sale'
+// Output:  ['#amazing', '#bongo', '#drums']
 
-isEmpty(str)
+isEmpty(str)          // Checks if the string is empty
+// Input:   'hello world'
+// Output:  False
 ```
 
 ### Helper Functions
 ```javascript
-lowerFirst(str)
+lowerFirst(str)         // Lower cases the first letter of the first word
 
-removeItem(array, item)
+removeItem(array, item) // Removes a given item in a given array
 ```
