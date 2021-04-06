@@ -16,5 +16,10 @@
   "bugs": {
     "url": "https://github.com/matthewwei35/FEW-2.1_MW_String_Lib/issues"
   },
-  "homepage": "https://github.com/matthewwei35/FEW-2.1_MW_String_Lib#readme"
+  "homepage": "https://github.com/matthewwei35/FEW-2.1_MW_String_Lib#readme",
+  "devDependencies": {
+    "eslint": "^7.23.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1"
+  }
 }

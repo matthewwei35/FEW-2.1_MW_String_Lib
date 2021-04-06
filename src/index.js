@@ -1,12 +1,14 @@
+/* eslint-disable func-names */
+/* eslint-disable no-extend-native */
 // ======= Helper Functions ======= //
 function lowerFirst(str) {
-  var strEndSlice = str.slice(1)
-  var firstLetter = str[0].toLowerCase()
-  return firstLetter + strEndSlice
+  const strEndSlice = str.slice(1);
+  const firstLetter = str[0].toLowerCase();
+  return firstLetter + strEndSlice;
 }
 
 function removeItem(array, item) {
-  var index = array.indexOf(item);
+  const index = array.indexOf(item);
   if (index > -1) {
     array.splice(index, 1);
   }
@@ -14,137 +16,137 @@ function removeItem(array, item) {
 
 // ======= upperFirst ======= //
 function upperFirst(str) {
-  var strEndSlice = str.slice(1)
-  var firstLetter = str[0].toUpperCase()
-  return firstLetter + strEndSlice
+  const strEndSlice = str.slice(1);
+  const firstLetter = str[0].toUpperCase();
+  return firstLetter + strEndSlice;
 }
 
-String.prototype.upperFirst = function() {
-  return upperFirst(this)
-}
+String.prototype.upperFirst = function () {
+  return upperFirst(this);
+};
 
 // ======= allCaps ======= //
 function allCaps(str) {
-  return str.toUpperCase()
+  return str.toUpperCase();
 }
 
-String.prototype.allCaps = function() {
-  return allCaps(this)
-}
+String.prototype.allCaps = function () {
+  return allCaps(this);
+};
 
 // ======= capitalizeWords ======= //
 function capitalizeWords(str) {
-  var words = str.split(' ')
-  var capsList = []
-  for (var i = 0; i < words.length; i++) {
-    capsList.push(upperFirst(words[i]))
+  const words = str.split(' ');
+  const capsList = [];
+  for (let i = 0; i < words.length; i += 1) {
+    capsList.push(upperFirst(words[i]));
   }
-  return capsList.join(' ')
+  return capsList.join(' ');
 }
 
-String.prototype.capitalizeWords = function() {
-  return capitalizeWords(this)
-}
+String.prototype.capitalizeWords = function () {
+  return capitalizeWords(this);
+};
 
 // ======= removeExtraSpace ======= //
 function removeExtraSpace(str) {
-  var words = str.split(' ')
-  for (var i = words.length; i > 1; i--) {
-    if (words[i] == ''){
-      removeItem(words, words[i])
+  const words = str.split(' ');
+  for (let i = words.length; i > 1; i -= 1) {
+    if (words[i] === '') {
+      removeItem(words, words[i]);
     }
   }
-  return words.join(' ')
+  return words.join(' ');
 }
 
-String.prototype.removeExtraSpace = function() {
-  return removeExtraSpace(this)
-}
+String.prototype.removeExtraSpace = function () {
+  return removeExtraSpace(this);
+};
 
 // ======= kebabCase ======= //
 function kebabCase(str) {
-  var words = str.split(' ')
-  var strKebab = []
-  for (var i = 0; i < words.length; i++) {
-    strKebab.push(lowerFirst(words[i]))
+  const words = str.split(' ');
+  const strKebab = [];
+  for (let i = 0; i < words.length; i += 1) {
+    strKebab.push(lowerFirst(words[i]));
   }
-  return strKebab.join('-')
+  return strKebab.join('-');
 }
 
-String.prototype.kebabCase = function() {
-  return kebabCase(this)
-}
+String.prototype.kebabCase = function () {
+  return kebabCase(this);
+};
 
 // ======= snakeCase ======= //
 function snakeCase(str) {
-  var words = str.split(' ')
-  var strSnake = []
-  for (var i = 0; i < words.length; i++) {
-    strSnake.push(lowerFirst(words[i]))
+  const words = str.split(' ');
+  const strSnake = [];
+  for (let i = 0; i < words.length; i += 1) {
+    strSnake.push(lowerFirst(words[i]));
   }
-  return strSnake.join('_')
+  return strSnake.join('_');
 }
 
-String.prototype.snakeCase = function() {
-  return snakeCase(this)
-}
+String.prototype.snakeCase = function () {
+  return snakeCase(this);
+};
 
 // ======= camelCase ======= //
 function camelCase(str) {
-  var words = str.split(' ')
-  var strCamel = []
-  strCamel.push(words[0].toLowerCase())
-  for (var i = 1; i < words.length; i++) {
-    strCamel.push(upperFirst(words[i]))
+  const words = str.split(' ');
+  const strCamel = [];
+  strCamel.push(words[0].toLowerCase());
+  for (let i = 1; i < words.length; i += 1) {
+    strCamel.push(upperFirst(words[i]));
   }
-  return strCamel.join('')
+  return strCamel.join('');
 }
 
-String.prototype.camelCase = function() {
-  return camelCase(this)
-}
+String.prototype.camelCase = function () {
+  return camelCase(this);
+};
 
 // ======= shift ======= //
 function shift(str) {
-  var strEndSlice = str.slice(1)
-  var firstLetter = str[0]
-  return strEndSlice + firstLetter
+  const strEndSlice = str.slice(1);
+  const firstLetter = str[0];
+  return strEndSlice + firstLetter;
 }
 
-String.prototype.shift = function() {
-  return shift(this)
-}
+String.prototype.shift = function () {
+  return shift(this);
+};
 
 // ======= makeHashTag ======= //
 function makeHashTag(str) {
-  var words = removeExtraSpace(str).split(' ')
-  var strHashTags = []
+  const words = removeExtraSpace(str).split(' ');
+  const strHashTags = [];
   if (words.length > 3) {
     words.sort((a, b) => {
-      b.length - a.length
-    })
-    for (var i = 0; i < 3; i++) {
-      strHashTags.push('#' + upperFirst(words[i]))
+      b.length - a.length;
+    });
+    for (let i = 0; i < 3; i += 1) {
+      strHashTags.push(`#${upperFirst(words[i])}`);
     }
   }
-  return strHashTags
+  return strHashTags;
 }
 
-String.prototype.makeHashTag = function() {
-  return makeHashTag(this)
-}
+String.prototype.makeHashTag = function () {
+  return makeHashTag(this);
+};
 
 // ======= isEmpty ======= //
 function isEmpty(str) {
-  var words = str.trim().split('')
-  for (var i = 0; i < words.length; i++) {
-    if (words[i] != ('\n' || '\r' || '\t')) {
-      return false
+  const words = str.trim().split('');
+  for (let i = 0; i < words.length; i += 1) {
+    if (words[i] !== ('\n' || '\r' || '\t')) {
+      return false;
     }
   }
-  return true
+  return true;
 }
 
-String.prototype.isEmpty = function() {
-  return isEmpty(this)
-}
+String.prototype.isEmpty = function () {
+  return isEmpty(this);
+};
