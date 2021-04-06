@@ -40,7 +40,7 @@ shift(str)            // Shifts the first letter of the first word to the back
 // Input:   'hello world'
 // Output:  'ello worldh'
 
-makeHashTag(str)      // Gets the 3 biggest words in the string and changes the format of each word to hashtags
+makeHashTag(str)      // Changes format of 3 longest words to hashtags
 // Input:   'Amazing bongo drums for sale'
 // Output:  ['#amazing', '#bongo', '#drums']
 
