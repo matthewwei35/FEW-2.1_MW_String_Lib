@@ -174,3 +174,14 @@ function isEmpty(str) {
 String.prototype.isEmpty = function () {
   return isEmpty(this);
 };
+
+module.exports.upperFirst = upperFirst;
+module.exports.allCaps = allCaps;
+module.exports.capitalizeWords = capitalizeWords;
+module.exports.removeExtraSpace = removeExtraSpace;
+module.exports.kebabCase = kebabCase;
+module.exports.snakeCase = snakeCase;
+module.exports.camelCase = camelCase;
+module.exports.shift = shift;
+module.exports.makeHashTag = makeHashTag;
+module.exports.isEmpty = isEmpty;
