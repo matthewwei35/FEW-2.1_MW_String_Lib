@@ -1,3 +1,4 @@
+/* eslint-disable no-use-before-define */
 /* eslint-disable func-names */
 /* eslint-disable no-extend-native */
 // ======= Helper Functions ======= //
@@ -16,6 +17,9 @@ function removeItem(array, item) {
 
 // ======= upperFirst ======= //
 function upperFirst(str) {
+  if (isEmpty(str) === true) {
+    return '';
+  }
   const strEndSlice = str.slice(1);
   const firstLetter = str[0].toUpperCase();
   return firstLetter + strEndSlice;
@@ -27,6 +31,9 @@ String.prototype.upperFirst = function () {
 
 // ======= allCaps ======= //
 function allCaps(str) {
+  if (isEmpty(str) === true) {
+    return '';
+  }
   return str.toUpperCase();
 }
 
@@ -65,6 +72,9 @@ String.prototype.removeExtraSpace = function () {
 
 // ======= kebabCase ======= //
 function kebabCase(str) {
+  if (isEmpty(str) === true) {
+    return '';
+  }
   const words = str.split(' ');
   const strKebab = [];
   for (let i = 0; i < words.length; i += 1) {
@@ -79,6 +89,9 @@ String.prototype.kebabCase = function () {
 
 // ======= snakeCase ======= //
 function snakeCase(str) {
+  if (isEmpty(str) === true) {
+    return '';
+  }
   const words = str.split(' ');
   const strSnake = [];
   for (let i = 0; i < words.length; i += 1) {
@@ -93,6 +106,9 @@ String.prototype.snakeCase = function () {
 
 // ======= camelCase ======= //
 function camelCase(str) {
+  if (isEmpty(str) === true) {
+    return '';
+  }
   const words = str.split(' ');
   const strCamel = [];
   strCamel.push(words[0].toLowerCase());
@@ -108,6 +124,9 @@ String.prototype.camelCase = function () {
 
 // ======= shift ======= //
 function shift(str) {
+  if (isEmpty(str) === true) {
+    return '';
+  }
   const strEndSlice = str.slice(1);
   const firstLetter = str[0];
   return strEndSlice + firstLetter;
@@ -119,10 +138,15 @@ String.prototype.shift = function () {
 
 // ======= makeHashTag ======= //
 function makeHashTag(str) {
+  if (isEmpty(str) === true) {
+    return '';
+  }
   const words = removeExtraSpace(str).split(' ');
   const strHashTags = [];
   if (words.length > 3) {
+    // eslint-disable-next-line array-callback-return
     words.sort((a, b) => {
+      // eslint-disable-next-line no-unused-expressions
       b.length - a.length;
     });
     for (let i = 0; i < 3; i += 1) {
